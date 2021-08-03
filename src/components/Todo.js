@@ -28,7 +28,7 @@ function Todo({ text, todos , setTodos, todo }) {
 
   const updateHandler = () => {
     const newTodo = todos.map(item => (item.id === todo.id) ? {...item, text:editValue} : item )
-    if (editValue) {
+    if (editValue.trim()) {
       setTodos(newTodo)
     } else {
       setEditValue(todo.text)
