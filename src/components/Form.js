@@ -36,7 +36,7 @@ function Form({ inputText, setInputText, todos, setTodos, warning, setWarning, s
 
     return (
     <form>
-      <input autoFocus value={inputText} onChange={inputValueHandler} placeholder={warning} type="text" className="todo-input" />
+      <input autoFocus value={inputText} onChange={inputValueHandler} placeholder={warning} type="text" className="todo-input"/>
       <button onClick={(e) => {submitTodoHandler(e); warningHandler()}} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
