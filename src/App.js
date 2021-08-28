@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {getLocalTotos()},[])
   useEffect(() => {filterdTodosHandler()},[todos, status])
-  useEffect(() => {saveLocalTotos()},[todos, status])
+  useEffect(() => {saveLocalTotos()},[todos])
 
   const filterdTodosHandler = () => {
     switch (status) {
