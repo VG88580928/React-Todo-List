@@ -99,6 +99,7 @@ form button:hover {
 
 /*CUSTOM SELECTOR */
 select {
+  /* appearance是用來消除表單默認的樣式，因為我們的表單是要自定義的 */
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -131,6 +132,8 @@ select {
   padding: 1rem;
   background: #ff6f47;
   cursor: pointer;
+  /* pointer-events是用來穿透element的,由於我們希望觸發下拉選單的功能必須要在整塊選單上(包含::after這個勾勾部分)都能點擊，
+  所以這裡的pointer-events: none可以讓我們穿透這塊::after勾勾,如願的點在選單上 */
   pointer-events: none;
   transition: all 0.3s ease;
 }

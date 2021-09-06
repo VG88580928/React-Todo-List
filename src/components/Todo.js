@@ -43,6 +43,8 @@ function Todo({ text, todos , setTodos, todo }) {
   }
 
   const deleteHandler = (e) => {
+    /*  由於我們在div使用onTransitionEnd監聽有無transition,有的話確保執行完transition後才觸發deleteHandler刪除todo,
+    而這塊div同時又有completeHandler會觸發transition,這樣點擊完成的勾勾後todo也會消失,此判斷式確保在class有.fall的情況才刪除todo */
     if (e.target.className === "todo fall" || e.target.className === "todo completed fall") {
       setTodos(todos.filter(item => {
         return item.id !== todo.id
