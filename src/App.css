@@ -44,7 +44,7 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30vw;
+  min-width: 30%;
   list-style: none;
 }
 
@@ -168,4 +168,21 @@ select {
   padding: 4px 0;
   margin: 0 10px;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  form > input {
+    width: 55vw;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  form > input {
+    width: 55vw;
+    margin-left: 10px;
+  }
+  .select {
+    width: 48px;
+  }
 }
